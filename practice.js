@@ -109,7 +109,7 @@ for(let i = 0; i <= 20; i += 2)
 numbers.push(i);
   return numbers;
 }
-console.log(countEvens())
+// console.log(countEvens())
 
 //////////////////PROBLEM 11////////////////////
 
@@ -134,9 +134,13 @@ function countdown() {
 function backwards(inputArray) {
   let newArray = [];
   // Code here
-
+  for(let i = 0; i < inputArray.length; i++){
+    newArray.unshift(inputArray[i])
+  }
   return newArray;
 }
+// const backArr = [1,2,3,4,5]
+// console.log(backwards(backArr))
 
 //////////////////PROBLEM 13////////////////////
 
@@ -148,8 +152,13 @@ function backwards(inputArray) {
 
 function findInArray(inputArray, value) {
   // Code here
+  if(inputArray.includes(value)){
+    valueFound = true
+  } else valueFound = false
   return valueFound;
 }
+// const checkArr = [1,2,3,4,5]
+// console.log(findInArray(checkArr, 3))
 
 //////////////////PROBLEM 14////////////////////
 
@@ -162,6 +171,14 @@ function findInArray(inputArray, value) {
 function stopAtNegative(inputArray) {
   let newArray = [];
   // Code here
-
+for(let i = 0; i < inputArray.length; i++){
+  if(inputArray[i] > 0){
+    newArray.push(inputArray[i])
+  } else {
+    break
+  }
+}
   return newArray;
 }
+// const testArr = [3, 6, 3, -1, 4]
+// console.log(stopAtNegative(testArr))
